@@ -1,2 +1,9 @@
-alert("hey");
-alert("whats up")
+const myLibrary = [];
+
+function Book() {
+  // the constructor...
+}
+
+function addBookToLibrary() {
+  // do stuff here
+}
