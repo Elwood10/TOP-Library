@@ -10,9 +10,10 @@
 <body>
  <div class="header">
     <h1><i>ODIN'S LIBRARY</i></h1>
+    <button class="addBook" id="addBook"><b>Add A Book<b></b></button>
  </div>
- <div class="form-section">
-    <form class="form" action="" method="post">
+ <dialog class="form-section" id="form-section"> 
+    <form class="form" action="" method="dialog">
         <label for="title">Book Title</label>
         <input type="text" id="title" name="title">
         <label for="author">Author</label>
@@ -22,7 +23,8 @@
         <label for="read">Have you read the book</label>
         <input type="checkbox" id="read" name="read" >
         <input for="submit" type="submit" id="submit" >
+        <button class="close-form" id="close-form">Cancel</button>
     </form>
- </div>
+ </dialog>
 </body>
 </html>
