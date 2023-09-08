@@ -7,12 +7,6 @@ function Book(title, author, pages, read) {
 	this.pages = pages
 	this.read = read
 }
-/* gets the event to run the add to myLibrary*/
-//let addBook = document.getElementById("addBook")
-//addBook.addEventListener("click", addIt())
-//function addIt() {}
-/* gets the input from the form for the new book*/
-//THIS DIDN'T DO ANYTHING, DELETE IT
 
 function addBookToLibrary() {
 	let title = document.getElementById("title").value
@@ -32,19 +26,50 @@ function addBookToLibrary() {
 	document.getElementById("read").checked = false
 }
 
-let submitButton = document.getElementById("submit")
 
-submitButton.addEventListener("click", (e) => {
-	e.preventDefault()
-	addBookToLibrary()
-	console.log(myLibrary)
-})
 /* set up the modal pop up for adding books to the library*/
 let openForm = document.getElementById("addBook")
-//let closeForm = document.getElementById("close-form")
 let getForm = document.getElementById("form-section")
-//THIS ISN'T DOING ANYTHING, DELETE IT
-
 openForm.addEventListener("click", () => {
 	getForm.showModal()
+})
+//add books to html//
+let submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  addBookToLibrary();
+ 
+  console.log(myLibrary);
+  
+  let latestBook = myLibrary[myLibrary.length - 1]
+  console.log(latestBook)
+  
+  const bookList = document.getElementById("formSection");
+let card = document.createElement("div");
+  card.classList.add('inventory')
+  bookList.appendChild(card)
+  
+   let bookSpace = document.createElement("p");
+   let bookSpaceTitle = document.createTextNode(`title: ${latestBook.title}`)
+   bookSpace.appendChild(bookSpaceTitle);
+ 
+  
+   let bookSpace2 = document.createElement("p");
+   let bookSpaceAuthor = document.createTextNode(`author: ${latestBook.author}`)
+   bookSpace2.appendChild(bookSpaceAuthor);
+  
+  let bookSpace3 = document.createElement("p");
+   let bookSpacePages = document.createTextNode(`pages: ${latestBook.pages}`)
+   bookSpace3.appendChild(bookSpacePages);
+  
+  let bookSpace4 = document.createElement("p");
+   let bookSpaceRead = document.createTextNode(`Read: ${latestBook.read}`)
+   bookSpace4.appendChild(bookSpaceRead);
+  
+   card.appendChild(bookSpace);
+  card.appendChild(bookSpace2);
+  card.appendChild(bookSpace3);
+  card.appendChild(bookSpace4);
+   
+  
 })

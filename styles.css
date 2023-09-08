@@ -25,9 +25,11 @@ dialog{
 }
 
 .form-section::backdrop {
+
 background: aquamarine;
 opacity: 70%;
 }
+
 input{
     width: 100px;
     outline: none;
@@ -43,4 +45,18 @@ button{
     width: 80px;
     margin-left:12px;
     background-color: grey;
+}
+
+.formSection{
+    display:grid;
+    grid-column-start:1;
+    grid-row-start: 2;
+}
+
+.inventory{ 
+    border: 3px solid black;
+  border-radius: 20px;
+    background: linear-gradient(to right, rgba(164, 224, 195, 0), rgb(4, 83, 50));  
+    border-radius: 10px; 
+
 }
