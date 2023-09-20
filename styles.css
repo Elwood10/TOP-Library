@@ -13,7 +13,7 @@
 }
 
 .addBook {
-	margin-left: 70px;
+	margin-left: 89px;
 	border-radius: 10px;
 }
 
@@ -50,13 +50,17 @@ button {
 	border-radius: 20px;
 	background: linear-gradient(to right, rgba(164, 224, 195, 0), rgb(4, 83, 50));
 	border-radius: 10px;
-	max-height: 160px;
+	max-height: 175px;
 }
 .container2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	gap: 5px;
 	height: 80vh;
 	background-color: aquamarine;
+}
+.removeBook{
+	border-radius: 30px;
+	margin-left: 240px;
 }
